@@ -1,0 +1,14 @@
+﻿  Account.cpp
+C:\Users\이상혁\Desktop\문서\Practice\OOP Project\OOP Project\HighCreitAccount.h(10,57): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 'Account.cpp'을(를) 컴파일하는 중)
+  
+  AccountHandler.cpp
+C:\Users\이상혁\Desktop\문서\Practice\OOP Project\OOP Project\HighCreitAccount.h(10,57): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 'AccountHandler.cpp'을(를) 컴파일하는 중)
+  
+  BankingSystemMain.cpp
+C:\Users\이상혁\Desktop\문서\Practice\OOP Project\OOP Project\HighCreitAccount.h(10,57): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 'BankingSystemMain.cpp'을(를) 컴파일하는 중)
+  
+  코드를 생성하고 있습니다...
+  OOP Project.vcxproj -> C:\Users\이상혁\Desktop\문서\Practice\OOP Project\x64\Debug\OOP Project.exe
