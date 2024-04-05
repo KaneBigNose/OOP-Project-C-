@@ -1,5 +1,5 @@
 #pragma once
-#include "NormalAccount.h"
+#include "BankingCommonDec1.h"
 
 class HighCreditAccount : public NormalAccount // 신용 신뢰 계좌 클래스
 {
