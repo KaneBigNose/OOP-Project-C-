@@ -1,9 +1,11 @@
 #pragma once
 
+#include "BankingCommonDec1.h"
+
 class AccountHandler // 계좌 컨트롤 클래스
 {
 private:
-	Account* accArr[100]; // 객체 배열
+	AccountArray accArr; // 객체 배열
 	int accNum; // 생성된 계좌의 개수
 public:
 	AccountHandler(); // 생성자

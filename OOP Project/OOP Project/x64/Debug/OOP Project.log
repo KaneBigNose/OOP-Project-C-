@@ -1,14 +1,51 @@
 ﻿  Account.cpp
-C:\Users\이상혁\Desktop\문서\Practice\OOP Project\OOP Project\HighCreitAccount.h(10,57): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\이상혁\Desktop\문서\Practice\OOP-Project-C-\OOP Project\OOP Project\HighCreitAccount.h(10,57): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 'Account.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\이상혁\Desktop\문서\Practice\OOP-Project-C-\OOP Project\OOP Project\AccountHandler.h(8,15): error C3646: 'accArr': 알 수 없는 재정의 지정자입니다.
+  (소스 파일 'Account.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\이상혁\Desktop\문서\Practice\OOP-Project-C-\OOP Project\OOP Project\AccountHandler.h(8,21): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
   (소스 파일 'Account.cpp'을(를) 컴파일하는 중)
   
   AccountHandler.cpp
-C:\Users\이상혁\Desktop\문서\Practice\OOP Project\OOP Project\HighCreitAccount.h(10,57): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\이상혁\Desktop\문서\Practice\OOP-Project-C-\OOP Project\OOP Project\HighCreitAccount.h(10,57): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   (소스 파일 'AccountHandler.cpp'을(를) 컴파일하는 중)
   
+C:\Users\이상혁\Desktop\문서\Practice\OOP-Project-C-\OOP Project\OOP Project\AccountHandler.h(8,15): error C3646: 'accArr': 알 수 없는 재정의 지정자입니다.
+  (소스 파일 'AccountHandler.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\이상혁\Desktop\문서\Practice\OOP-Project-C-\OOP Project\OOP Project\AccountHandler.h(8,21): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'AccountHandler.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\이상혁\Desktop\문서\Practice\OOP-Project-C-\OOP Project\OOP Project\AccountHandler.cpp(44,2): error C2065: 'accArr': 선언되지 않은 식별자입니다.
+C:\Users\이상혁\Desktop\문서\Practice\OOP-Project-C-\OOP Project\OOP Project\AccountHandler.cpp(64,3): error C2065: 'accArr': 선언되지 않은 식별자입니다.
+C:\Users\이상혁\Desktop\문서\Practice\OOP-Project-C-\OOP Project\OOP Project\AccountHandler.cpp(68,3): error C2065: 'accArr': 선언되지 않은 식별자입니다.
+C:\Users\이상혁\Desktop\문서\Practice\OOP-Project-C-\OOP Project\OOP Project\AccountHandler.cpp(72,3): error C2065: 'accArr': 선언되지 않은 식별자입니다.
+C:\Users\이상혁\Desktop\문서\Practice\OOP-Project-C-\OOP Project\OOP Project\AccountHandler.cpp(90,7): error C2065: 'accArr': 선언되지 않은 식별자입니다.
+C:\Users\이상혁\Desktop\문서\Practice\OOP-Project-C-\OOP Project\OOP Project\AccountHandler.cpp(92,4): error C2065: 'accArr': 선언되지 않은 식별자입니다.
+C:\Users\이상혁\Desktop\문서\Practice\OOP-Project-C-\OOP Project\OOP Project\AccountHandler.cpp(108,7): error C2065: 'accArr': 선언되지 않은 식별자입니다.
+C:\Users\이상혁\Desktop\문서\Practice\OOP-Project-C-\OOP Project\OOP Project\AccountHandler.cpp(110,4): error C2065: 'accArr': 선언되지 않은 식별자입니다.
+C:\Users\이상혁\Desktop\문서\Practice\OOP-Project-C-\OOP Project\OOP Project\AccountHandler.cpp(120,3): error C2065: 'accArr': 선언되지 않은 식별자입니다.
+C:\Users\이상혁\Desktop\문서\Practice\OOP-Project-C-\OOP Project\OOP Project\AccountHandler.cpp(125,44): error C2065: 'accArr': 선언되지 않은 식별자입니다.
+  AccountArray.cpp
+C:\Users\이상혁\Desktop\문서\Practice\OOP-Project-C-\OOP Project\OOP Project\HighCreitAccount.h(10,57): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 'AccountArray.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\이상혁\Desktop\문서\Practice\OOP-Project-C-\OOP Project\OOP Project\AccountHandler.h(8,15): error C3646: 'accArr': 알 수 없는 재정의 지정자입니다.
+  (소스 파일 'AccountArray.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\이상혁\Desktop\문서\Practice\OOP-Project-C-\OOP Project\OOP Project\AccountHandler.h(8,21): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'AccountArray.cpp'을(를) 컴파일하는 중)
+  
   BankingSystemMain.cpp
-C:\Users\이상혁\Desktop\문서\Practice\OOP Project\OOP Project\HighCreitAccount.h(10,57): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\이상혁\Desktop\문서\Practice\OOP-Project-C-\OOP Project\OOP Project\HighCreitAccount.h(10,57): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 'BankingSystemMain.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\이상혁\Desktop\문서\Practice\OOP-Project-C-\OOP Project\OOP Project\AccountHandler.h(8,15): error C3646: 'accArr': 알 수 없는 재정의 지정자입니다.
+  (소스 파일 'BankingSystemMain.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\이상혁\Desktop\문서\Practice\OOP-Project-C-\OOP Project\OOP Project\AccountHandler.h(8,21): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
   (소스 파일 'BankingSystemMain.cpp'을(를) 컴파일하는 중)
   
   코드를 생성하고 있습니다...
-  OOP Project.vcxproj -> C:\Users\이상혁\Desktop\문서\Practice\OOP Project\x64\Debug\OOP Project.exe

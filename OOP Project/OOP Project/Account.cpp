@@ -13,6 +13,13 @@ Account::Account(const Account& copy) //복사 생성자
 	this->cus_name = new char[strlen(copy.cus_name) + 1];
 	strcpy_s(this->cus_name, NAME_LEN, copy.cus_name);
 }
+Account Account::operator=(Account& copy) // 대입 연산자
+{
+	this->accID = copy.accID;
+	this->remain_money = copy.remain_money;
+	this->cus_name = new char[strlen(copy.cus_name) + 1];
+	strcpy_s(this->cus_name, NAME_LEN, copy.cus_name);
+}
 int Account::return_ID() const { return accID; } //ID에 접근하는 멤버 함수
 int Account::return_remain_money() const { return remain_money; } //금액에 접근하는 멤버 함수
 char* Account::return_cusname() const { return cus_name; } //이름에 접근하는 멤버 함수

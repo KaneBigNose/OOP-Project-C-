@@ -1,7 +1,7 @@
 #pragma once
 #include "BankingCommonDec1.h"
 
-AccountHandler::AccountHandler() : accNum(0) {} // 생성자
+AccountHandler::AccountHandler() : accNum(0) {}
 void AccountHandler::ShowMenu() const // 메뉴 나타내기 멤버 함수
 {
 	cout << "-----Menu------" << endl;
