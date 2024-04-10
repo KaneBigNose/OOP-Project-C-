@@ -1,5 +1,9 @@
 #pragma once
-#include "BankingCommonDec1.h"
+
+#include "AccountHandler.h"
+#include "String.h"
+#include "NormalAccount.h"
+#include "HighCreitAccount.h"
 
 AccountHandler::AccountHandler() // 생성자
 	: accNum(0) {}
@@ -33,7 +37,7 @@ void AccountHandler::ChoiceHowToMakeAccount(int choice) // 생성할 계좌 유형 설정
 void AccountHandler::MakeNormalAccount() // 보통 예금 계좌 개설 멤버 함수
 {
 	int id;
-	char name[NAME_LEN];
+	String name;
 	int money;
 	int interest_rate;
 	cout << "[보통예금계좌 개설]" << endl;
@@ -48,7 +52,7 @@ void AccountHandler::MakeNormalAccount() // 보통 예금 계좌 개설 멤버 함수
 void AccountHandler::MakeHighCreditAccount() // 신용 신뢰 계좌 개설 멤버 함수
 {
 	int id;
-	char name[NAME_LEN];
+	String name;
 	int money;
 	int interest_rate;
 	int credit_level;
@@ -88,7 +92,7 @@ void AccountHandler::DepositMoney() // 입금 멤버 함수
 
 	for (int i = 0; i < accNum; i++)
 	{
-		if (accArr[i]->return_ID() == id)
+		if (accArr[i]->Get_ID() == id)
 		{
 			accArr[i]->DepositMoney(money);
 			return;
@@ -106,7 +110,7 @@ void AccountHandler::WithdrawMoney() // 출금 멤버 함수
 
 	for (int i = 0; i < accNum; i++)
 	{
-		if (accArr[i]->return_ID() == id)
+		if (accArr[i]->Get_ID() == id)
 		{
 			accArr[i]->WithDrawMoney(money);
 			return;

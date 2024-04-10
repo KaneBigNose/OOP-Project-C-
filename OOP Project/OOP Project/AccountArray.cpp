@@ -1,5 +1,6 @@
 #pragma once
 
+#include "AccountArray.h"
 #include "BankingCommonDec1.h"
 
 AccountArray::AccountArray() : acc_len() // 디폴트 생성자

@@ -1,29 +1,11 @@
 #pragma once
-#include "BankingCommonDec1.h"
+#include "Account.h"
 
-Account::Account(int accID, char* cus_name, int money) //일반 생성자
+Account::Account(int accID, String cus_name, int money) //일반 생성자
 	:accID(accID), remain_money(money)
 {
-	this->cus_name = new char[strlen(cus_name) + 1];
-	strcpy_s(this->cus_name, NAME_LEN, cus_name);
+	this->cus_name = cus_name;
 }
-Account::Account(const Account& copy) //복사 생성자
-	:accID(copy.accID), remain_money(copy.remain_money)
-{
-	this->cus_name = new char[strlen(copy.cus_name) + 1];
-	strcpy_s(this->cus_name, NAME_LEN, copy.cus_name);
-}
-Account& Account::operator=(Account& copy) // 대입 연산자
-{
-	this->accID = copy.accID;
-	this->remain_money = copy.remain_money;
-	this->cus_name = new char[strlen(copy.cus_name) + 1];
-	strcpy_s(this->cus_name, NAME_LEN, copy.cus_name);
-	return *this;
-}
-int Account::return_ID() const { return accID; } //ID에 접근하는 멤버 함수
-int Account::return_remain_money() const { return remain_money; } //금액에 접근하는 멤버 함수
-char* Account::return_cusname() const { return cus_name; } //이름에 접근하는 멤버 함수
 void Account::DepositMoney(int money) //입금 가상 멤버 함수
 {
 	this->remain_money += money;
@@ -50,9 +32,4 @@ void Account::ShowInfo() const //정보를 나타내는 멤버 함수
 int Account::GetInterestRate() const
 {
 	return 0;
-}
-Account::~Account() //소멸자
-{
-	delete[]cus_name;
-	cout << "생성된 계좌 소멸" << endl;
 }
