@@ -13,12 +13,13 @@ Account::Account(const Account& copy) //복사 생성자
 	this->cus_name = new char[strlen(copy.cus_name) + 1];
 	strcpy_s(this->cus_name, NAME_LEN, copy.cus_name);
 }
-Account Account::operator=(Account& copy) // 대입 연산자
+Account& Account::operator=(Account& copy) // 대입 연산자
 {
 	this->accID = copy.accID;
 	this->remain_money = copy.remain_money;
 	this->cus_name = new char[strlen(copy.cus_name) + 1];
 	strcpy_s(this->cus_name, NAME_LEN, copy.cus_name);
+	return *this;
 }
 int Account::return_ID() const { return accID; } //ID에 접근하는 멤버 함수
 int Account::return_remain_money() const { return remain_money; } //금액에 접근하는 멤버 함수
@@ -41,9 +42,14 @@ void Account::WithDrawMoney(int money) //출금 멤버 함수
 }
 void Account::ShowInfo() const //정보를 나타내는 멤버 함수
 {
-	cout << "계좌ID: " << this->accID << endl;
-	cout << "이  름: " << this->cus_name << endl;
-	cout << "잔  액: " << this->remain_money << endl << endl;
+	cout << "계좌ID : " << this->accID << endl;
+	cout << "이  름 : " << this->cus_name << endl;
+	cout << "잔  액 : " << this->remain_money << endl;
+	cout << "이자율 : " << GetInterestRate() << "%" << endl << endl;
+}
+int Account::GetInterestRate() const
+{
+	return 0;
 }
 Account::~Account() //소멸자
 {

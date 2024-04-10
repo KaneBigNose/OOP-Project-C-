@@ -1,7 +1,8 @@
 #pragma once
 #include "BankingCommonDec1.h"
 
-AccountHandler::AccountHandler() : accNum(0) {}
+AccountHandler::AccountHandler() // 생성자
+	: accNum(0) {}
 void AccountHandler::ShowMenu() const // 메뉴 나타내기 멤버 함수
 {
 	cout << "-----Menu------" << endl;
@@ -36,10 +37,10 @@ void AccountHandler::MakeNormalAccount() // 보통 예금 계좌 개설 멤버 함수
 	int money;
 	int interest_rate;
 	cout << "[보통예금계좌 개설]" << endl;
-	cout << "계좌ID: ";	cin >> id;
-	cout << "이  름: ";	cin >> name;
-	cout << "입금액: ";	cin >> money;
-	cout << "이자율: "; cin >> interest_rate;
+	cout << "계좌ID : ";	cin >> id;
+	cout << "이  름 : ";	cin >> name;
+	cout << "입금액 : ";	cin >> money;
+	cout << "이자율 : "; cin >> interest_rate;
 	cout << endl;
 	accArr[accNum] = new NormalAccount(id, name, money, interest_rate);
 	accNum++;
@@ -52,11 +53,11 @@ void AccountHandler::MakeHighCreditAccount() // 신용 신뢰 계좌 개설 멤버 함수
 	int interest_rate;
 	int credit_level;
 	cout << "[신용신뢰계좌 개설]" << endl;
-	cout << "계좌ID: ";	cin >> id;
-	cout << "이  름: ";	cin >> name;
-	cout << "입금액: ";	cin >> money;
-	cout << "이자율: "; cin >> interest_rate;
-	cout << "신용등급(1 to A, 2 to B, 3 to C): "; cin >> credit_level;
+	cout << "계좌ID : ";	cin >> id;
+	cout << "이  름 : ";	cin >> name;
+	cout << "입금액 : ";	cin >> money;
+	cout << "이자율 : "; cin >> interest_rate;
+	cout << "신용등급 (1 to A, 2 to B, 3 to C): "; cin >> credit_level;
 	cout << endl;
 	switch (credit_level)
 	{
@@ -82,8 +83,8 @@ void AccountHandler::DepositMoney() // 입금 멤버 함수
 	int money;
 	int id;
 	cout << "[입    금]" << endl;
-	cout << "계좌ID: ";	cin >> id;
-	cout << "입금액: ";	cin >> money;
+	cout << "계좌ID : ";	cin >> id;
+	cout << "입금액 : ";	cin >> money;
 
 	for (int i = 0; i < accNum; i++)
 	{
@@ -100,8 +101,8 @@ void AccountHandler::WithdrawMoney() // 출금 멤버 함수
 	int money;
 	int id;
 	cout << "[출    금]" << endl;
-	cout << "계좌ID: ";	cin >> id;
-	cout << "출금액: ";	cin >> money;
+	cout << "계좌ID : ";	cin >> id;
+	cout << "출금액 : ";	cin >> money;
 
 	for (int i = 0; i < accNum; i++)
 	{

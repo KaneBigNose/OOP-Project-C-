@@ -1,6 +1,6 @@
 #pragma once
 
-#include "BankingCommonDec1.h"
+#include "AccountArray.h"
 
 class AccountHandler // 계좌 컨트롤 클래스
 {

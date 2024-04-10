@@ -17,7 +17,7 @@ public:
 	{
 		Account::DepositMoney((int)(return_remain_money() * interest_rate / 100.0));
 	}
-	int GetInterestRate() const
+	virtual int GetInterestRate() const
 	{
 		return interest_rate;
 	}
