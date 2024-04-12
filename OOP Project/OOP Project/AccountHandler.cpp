@@ -47,6 +47,7 @@ void AccountHandler::MakeNormalAccount() // 보통 예금 계좌 개설 멤버 함수
 	cout << "이자율 : "; cin >> interest_rate;
 	cout << endl;
 	accArr[accNum] = new NormalAccount(id, name, money, interest_rate);
+	cout << "Error";
 	accNum++;
 }
 void AccountHandler::MakeHighCreditAccount() // 신용 신뢰 계좌 개설 멤버 함수

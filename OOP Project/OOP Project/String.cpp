@@ -16,6 +16,13 @@ String::String(const char* s)
 	strcpy_s(str, NAME_LEN, s);
 }
 
+String::String(char* s)
+{
+	str_len = (int)(strlen(s) + 1);
+	str = new char[str_len + 1];
+	strcpy_s(str, NAME_LEN, s);
+}
+
 String::String(const String& s)
 {
 	str_len = s.str_len + 1;
@@ -31,20 +38,19 @@ String::~String()
 
 String& String::operator= (const String& s)
 {
-	if (str != NULL)
-		delete[]str;
-	str_len = s.str_len + 1;
-	str = new char[str_len+1];
-	strcpy_s(str, NAME_LEN, s.str);
-	if (str != NULL)
-		delete[]str;
+	if (this == &s)
+	{
+		return *this;
+	}
+	delete[]str;
+	str_len = strlen(s.str) + 1;
+	this->str = new char[str_len];
+	strcpy_s(this->str, NAME_LEN, s.str);
 	return *this;
 }
 
 String& String::operator+= (const String& s)
 {
-	if (str != NULL)
-		delete[]str;
 	str_len += (s.str_len + 1);
 	char* tempstr = new char[str_len+1];
 	strcpy_s(tempstr, NAME_LEN, str);
@@ -78,11 +84,19 @@ ostream& operator<< (ostream& os, const String& s)
 
 istream& operator>> (istream& is, String& s)
 {
-	char* temp;
-	temp = new char[NAME_LEN];
-	cin >> temp;
-	String tempstr(temp);
-	s = tempstr;
-	delete[]temp;
+	char str1[100];
+	is >> str1;
+	s.SetStr(str1);
 	return is;
+}
+
+void String::SetStr(char* c)
+{
+	this->str = new char[strlen(c) + 1];
+	strcpy_s(this->str, NAME_LEN, c);
+}
+
+char* String::GetStr() const
+{
+	return str;
 }
