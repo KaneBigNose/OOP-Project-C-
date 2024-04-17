@@ -3,32 +3,20 @@ using namespace std;
 
 template <class T>
 
-class Point
+T SumArray(T arr[], int len)
 {
-private:
-	T xpos, ypos;
-public:
-	Point(T xpos, T ypos) : xpos(xpos), ypos(ypos) {}
-	void ShowPosition() const
+	T sum = 0;
+	for (int i = 0; i < len; i++)
 	{
-		cout << "[" << xpos << ", " << ypos << "]" << endl;
+		sum += arr[i];
 	}
-};
+	return sum;
+}
 
 int main(void)
 {
-	int a = 1;
-	int b = 2;
-	double c = 0.8;
-	double d = 5.5;
-	const char* e = "5";
-	const char* f = "15";
-
-	Point<int> p1(a, b);
-	Point<double> p2(c, d);
-	Point<const char*> p3(e, f);
-
-	p1.ShowPosition();
-	p2.ShowPosition();
-	p3.ShowPosition();
+	int arr1[5] = { 1,2,3,4,5 };
+	double arr2[5] = { 0.1,0.2,0.3,0.4,0.5 };
+	cout << SumArray(arr1, 5) << endl;
+	cout << SumArray(arr2, 5);
 }
