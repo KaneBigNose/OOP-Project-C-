@@ -5,7 +5,7 @@
 class AccountHandler // 계좌 컨트롤 클래스
 {
 private:
-	BoundCheckArray<Account> accArr; // 객체 배열
+	BoundCheckArray<Account*> accArr; // 객체 배열
 	int accNum; // 생성된 계좌의 개수
 public:
 	AccountHandler(); // 생성자
