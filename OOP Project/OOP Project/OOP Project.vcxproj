@@ -129,9 +129,8 @@
   <ItemGroup>
     <ClCompile Include="Account.cpp" />
     <ClCompile Include="AccountHandler.cpp" />
-    <ClCompile Include="AccountArray.cpp" />
     <ClCompile Include="String.cpp" />
-    <ClInclude Include="AccountArray.h" />
+    <ClInclude Include="BoundCheckArray.h" />
     <ClInclude Include="BankingCommonDec1.h" />
     <ClCompile Include="BankingSystemMain.cpp" />
     <ClInclude Include="String.h" />
