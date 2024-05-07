@@ -1,6 +1,7 @@
 #pragma once
 
 #include "BoundCheckArray.h"
+#include "Exception.h"
 
 class AccountHandler // 계좌 컨트롤 클래스
 {

@@ -133,6 +133,7 @@
     <ClInclude Include="BoundCheckArray.h" />
     <ClInclude Include="BankingCommonDec1.h" />
     <ClCompile Include="BankingSystemMain.cpp" />
+    <ClInclude Include="Exception.h" />
     <ClInclude Include="String.h" />
   </ItemGroup>
   <ItemGroup>

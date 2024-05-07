@@ -87,37 +87,69 @@ void AccountHandler::DepositMoney() // 입금 멤버 함수
 {
 	int money;
 	int id;
-	cout << "[입    금]" << endl;
-	cout << "계좌ID : ";	cin >> id;
-	cout << "입금액 : ";	cin >> money;
-
-	for (int i = 0; i < accNum; i++)
+	while (1)
 	{
-		if (accArr[i]->Get_ID() == id)
+		cout << "[입    금]" << endl;
+		cout << "계좌ID : ";	cin >> id;
+		cout << "입금액 : ";	cin >> money;
+		try
 		{
-			accArr[i]->DepositMoney(money);
-			return;
+			if (money < 0) // 예외상황
+			{
+				throw DepositException(money);
+			}
+			for (int i = 0; i < accNum; i++)
+			{
+				if (accArr[i]->Get_ID() == id)
+				{
+					accArr[i]->DepositMoney(money);
+					break;
+				}
+			}
+			cout << "유효하지 않은 ID 입니다." << endl << endl;
+		}
+		catch (Exception& exct) // 예외처리
+		{
+			exct.ShowExceptionInfo();
+			cout << "입금하실 금액을 다시 입력해주시길 바랍니다." << endl;
 		}
 	}
-	cout << "유효하지 않은 ID 입니다." << endl << endl;
 }
 void AccountHandler::WithdrawMoney() // 출금 멤버 함수
 {
 	int money;
 	int id;
-	cout << "[출    금]" << endl;
-	cout << "계좌ID : ";	cin >> id;
-	cout << "출금액 : ";	cin >> money;
-
-	for (int i = 0; i < accNum; i++)
+	while (1)
 	{
-		if (accArr[i]->Get_ID() == id)
+		cout << "[출    금]" << endl;
+		cout << "계좌ID : ";	cin >> id;
+		cout << "출금액 : ";	cin >> money;
+		try
 		{
-			accArr[i]->WithDrawMoney(money);
-			return;
+			if (money < 0) // 예외상황
+			{
+				throw WithdrawException(money);
+			}
+			for (int i = 0; i < accNum; i++)
+			{
+				if (accArr[i]->Get_ID() == id)
+				{
+					if (accArr[i]->Get_remain_money() < money)
+					{
+						throw WithdrawException(money);
+					}
+					accArr[i]->WithDrawMoney(money);
+					break;
+				}
+			}
+			cout << "유효하지 않은 ID 입니다." << endl << endl;
+		}
+		catch (Exception& exct) // 예외처리
+		{
+			exct.ShowExceptionInfo();
+			cout << "출금하실 금액을 다시 입력해주시길 바랍니다." << endl;
 		}
 	}
-	cout << "유효하지 않은 ID 입니다." << endl << endl;
 }
 void AccountHandler::ShowAllAccInfo() const // 정보 제공 멤버 함수
 {
